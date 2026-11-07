@@ -1,0 +1,13 @@
+/* Overrides for running without the Squarespace runtime. */
+.user-items-list-carousel__slides{opacity:1!important;display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:20px}
+.user-items-list-carousel__slides::-webkit-scrollbar{display:none}
+.user-items-list-carousel__slide{transform:none!important;pointer-events:auto!important;user-select:auto!important;flex:0 0 calc((100% - (var(--static-cols,3) - 1) * 20px) / var(--static-cols,3));scroll-snap-align:start}
+@media (max-width:767px){.user-items-list-carousel__slide{flex-basis:100%}}
+.user-items-list-carousel__media-inner img,.user-items-list-banner-slideshow img,.user-items-list-simple .list-item-media-inner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.user-items-list-carousel__slide-media-wrapper,.user-items-list-carousel__media-inner{overflow:hidden}
+[data-animation-role],.preFade,.preScale,.preSlide,.preClip,.preFlex{opacity:1!important;transform:none!important;clip-path:none!important}
+img[data-sqsp-image-block-image]{opacity:1}
+.static-mail-note{margin-top:1em;font-size:.9em}
+.blog-basic-grid--container,.blog-item{opacity:1!important;transform:none!important}
+.static-mail-block .sqs-block-button-container{display:flex;flex-direction:column;align-items:flex-start;gap:.5em}
+.static-mail-block .static-mail-note{margin:0}
