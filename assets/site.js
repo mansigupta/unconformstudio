@@ -71,6 +71,48 @@
     c.querySelectorAll('[class*="arrow-button--right"]').forEach(function (b) { b.addEventListener('click', function () { step(1); }); });
   });
 
+
+  // The stand-in font is a little wider than Degular, so some headings wrap onto an
+  // extra line and run into the block below in Squarespace's fixed layout grid.
+  // Push any text block that overlaps the block above it down until it clears.
+  var TEXT = 'h1,h2,h3,h4,p,li,a.sqs-block-button-element,.summary-item';
+  function box(block) {
+    var r = null;
+    block.querySelectorAll(TEXT).forEach(function (e) {
+      var b = e.getBoundingClientRect();
+      if (!b.height || !e.offsetParent) return;
+      r = r ? { top: Math.min(r.top, b.top), bottom: Math.max(r.bottom, b.bottom), left: Math.min(r.left, b.left), right: Math.max(r.right, b.right) } : { top: b.top, bottom: b.bottom, left: b.left, right: b.right };
+    });
+    return r;
+  }
+  function unOverlap() {
+    d.querySelectorAll('.fluid-engine').forEach(function (fe) {
+      var blocks = Array.prototype.filter.call(fe.children, function (c) { return c.classList.contains('fe-block'); });
+      blocks.forEach(function (b) { b.style.marginTop = ''; });
+      for (var pass = 0; pass < 4; pass++) {
+        var moved = false;
+        var boxes = blocks.map(box);
+        blocks.forEach(function (b, j) {
+          var bj = boxes[j]; if (!bj) return;
+          var need = 0;
+          blocks.forEach(function (a, i) {
+            var ai = boxes[i]; if (i === j || !ai || ai.top >= bj.top) return;
+            var ox = Math.min(ai.right, bj.right) - Math.max(ai.left, bj.left);
+            var oy = ai.bottom - bj.top;
+            if (ox > 4 && oy > 4) need = Math.max(need, oy + 12);
+          });
+          if (need) { b.style.marginTop = (parseFloat(b.style.marginTop || 0) + need) + 'px'; moved = true; }
+        });
+        if (!moved) break;
+      }
+    });
+  }
+  var t;
+  function later() { clearTimeout(t); t = setTimeout(unOverlap, 150); }
+  if (d.fonts && d.fonts.ready) d.fonts.ready.then(unOverlap);
+  window.addEventListener('load', unOverlap);
+  window.addEventListener('resize', later);
+
   // Squarespace hides some blocks until its script runs; show them.
   body.classList.add('static-ready');
 })();
