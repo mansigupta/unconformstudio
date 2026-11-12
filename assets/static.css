@@ -46,3 +46,9 @@ img[data-sqsp-image-block-image]{opacity:1}
 .fe-66047a515aff7e1d33904b27{grid-template-rows:auto!important}
 .fe-66047a515aff7e1d33904b27 .fe-block-yui_3_17_2_1_1711568271832_25021{grid-area:1/2/2/10!important}
 @media (min-width:768px){.fe-66047a515aff7e1d33904b27 .fe-block-yui_3_17_2_1_1711568271832_25021{grid-area:1/8/2/20!important}}
+/* Learning page: single centred "bring women-centric design to your team" block */
+.fe-65fbf60a6032430f7e6c62a1{grid-template-rows:auto!important}
+.fe-65fbf60a6032430f7e6c62a1 .fe-block-yui_3_17_2_1_1711010880543_18240{grid-area:1/2/2/10!important;text-align:center}
+@media (min-width:768px){.fe-65fbf60a6032430f7e6c62a1 .fe-block-yui_3_17_2_1_1711010880543_18240{grid-area:1/6/2/22!important}}
+.fe-block-yui_3_17_2_1_1711010880543_18240 h3{text-wrap:balance}
+.fe-block-yui_3_17_2_1_1711010880543_18240 p a{color:inherit}
