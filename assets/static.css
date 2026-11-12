@@ -27,3 +27,14 @@ img[data-sqsp-image-block-image]{opacity:1}
 /* Home hero heading: smaller, on four balanced lines (no single-word lines) */
 .fe-block-24b600996765d6103c71{container-type:inline-size}
 .fe-block-24b600996765d6103c71 h1{font-size:clamp(24px,10.5cqi,72px)!important;text-wrap:balance}
+/* Footer: logo, tagline and email where the newsletter box was */
+.footer-brand .footer-brand__logo{margin:0 0 1.2em}
+.footer-brand .footer-brand__logo img{display:block;width:220px!important;max-width:100%!important;height:auto!important}
+.footer-brand .footer-brand__tagline{margin:0 0 1em;max-width:24ch;font-size:1.35rem;line-height:1.35}
+.footer-brand .footer-brand__email{margin:0;font-size:1rem}
+.footer-brand .footer-brand__email a{color:inherit}
+/* Phones: copyright straight under the links (the sign-up form used to sit between them) */
+@media (max-width:767px){
+  .fe-6537c5af6cde305cfbb59602{grid-template-rows:repeat(14,minmax(24px,auto))!important}
+  .fe-block-yui_3_17_2_1_1710507295889_11966{grid-area:13/2/15/10!important}
+}
