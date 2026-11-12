@@ -52,3 +52,21 @@ img[data-sqsp-image-block-image]{opacity:1}
 @media (min-width:768px){.fe-65fbf60a6032430f7e6c62a1 .fe-block-yui_3_17_2_1_1711010880543_18240{grid-area:1/6/2/22!important}}
 .fe-block-yui_3_17_2_1_1711010880543_18240 h3{text-wrap:balance}
 .fe-block-yui_3_17_2_1_1711010880543_18240 p a{color:inherit}
+/* Course page: headings sized to their column so they keep the agreed line counts */
+.fe-block-104e84c34031c92a0f75,.fe-block-yui_3_17_2_1_1712837257978_5421,.fe-block-yui_3_17_2_1_1712843069518_4543,
+.fe-block-e74829cdee6ee99a898e,.fe-block-842a157d81b4edb8685a,.fe-block-6bfa0856291aec63420f{container-type:inline-size}
+/* the two statements: three lines each, same size */
+.fe-block-104e84c34031c92a0f75 h3,.fe-block-yui_3_17_2_1_1712837257978_5421 h3{font-size:clamp(16px,4.75cqi,34px)!important;text-wrap:balance}
+/* "This course is for you if:" on one line */
+.fe-block-yui_3_17_2_1_1712843069518_4543 h2{font-size:clamp(18px,8.5cqi,50px)!important;white-space:nowrap}
+/* COURSE / SCHEDULE and COURSE / SYLLABUS: no word split */
+.fe-block-e74829cdee6ee99a898e h1,.fe-block-842a157d81b4edb8685a h1{font-size:clamp(20px,18cqi,69px)!important;overflow-wrap:normal;word-break:normal;hyphens:none}
+/* MEET MANSI, / YOUR INSTRUCTOR on two lines */
+.fe-block-6bfa0856291aec63420f h1{font-size:clamp(20px,10cqi,69px)!important;white-space:nowrap}
+/* Course page: single centred "bring this course to your team" block */
+.fe-65fbfa9d0e83492b6618164e{grid-template-rows:auto!important}
+.fe-65fbfa9d0e83492b6618164e .fe-block-11c314ace204b7e68eaa{grid-area:1/2/2/10!important;text-align:center}
+@media (min-width:768px){.fe-65fbfa9d0e83492b6618164e .fe-block-11c314ace204b7e68eaa{grid-area:1/6/2/22!important}}
+.fe-block-11c314ace204b7e68eaa h3{text-wrap:balance}
+.fe-block-11c314ace204b7e68eaa p a{color:inherit}
+@media (max-width:767px){.fe-block-e74829cdee6ee99a898e h1,.fe-block-842a157d81b4edb8685a h1{font-size:clamp(20px,18cqi,45px)!important}}
