@@ -42,3 +42,7 @@ img[data-sqsp-image-block-image]{opacity:1}
 .fe-65fc095e3187af03f28e92ef{grid-template-rows:auto!important}
 .fe-65fc095e3187af03f28e92ef .fe-block-yui_3_17_2_1_1711010880543_164412{grid-area:1/2/2/10!important}
 @media (min-width:768px){.fe-65fc095e3187af03f28e92ef .fe-block-yui_3_17_2_1_1711010880543_164412{grid-area:1/7/2/21!important}}
+/* Events banner: just tall enough for its text */
+.fe-66047a515aff7e1d33904b27{grid-template-rows:auto!important}
+.fe-66047a515aff7e1d33904b27 .fe-block-yui_3_17_2_1_1711568271832_25021{grid-area:1/2/2/10!important}
+@media (min-width:768px){.fe-66047a515aff7e1d33904b27 .fe-block-yui_3_17_2_1_1711568271832_25021{grid-area:1/8/2/20!important}}
