@@ -24,3 +24,6 @@ img[data-sqsp-image-block-image]{opacity:1}
 @media (max-width:767px){.summary-v2-block .summary-item-list{grid-template-columns:1fr}}
 /* Events page stats: keep each number on one line on phones */
 @media (max-width:767px){.fe-block-798ab9875c951a86dd1f h2,.fe-block-c6d5b28804b974952066 h2,.fe-block-yui_3_17_2_1_1713262398014_8415 h2{white-space:nowrap;font-size:24px!important}}
+/* Home hero heading: smaller, on four balanced lines (no single-word lines) */
+.fe-block-24b600996765d6103c71{container-type:inline-size}
+.fe-block-24b600996765d6103c71 h1{font-size:clamp(24px,10.5cqi,72px)!important;text-wrap:balance}
