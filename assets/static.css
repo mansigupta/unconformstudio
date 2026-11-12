@@ -38,3 +38,7 @@ img[data-sqsp-image-block-image]{opacity:1}
   .fe-6537c5af6cde305cfbb59602{grid-template-rows:repeat(14,minmax(24px,auto))!important}
   .fe-block-yui_3_17_2_1_1710507295889_11966{grid-area:13/2/15/10!important}
 }
+/* Resources banner: heading only, so the section is just tall enough for it */
+.fe-65fc095e3187af03f28e92ef{grid-template-rows:auto!important}
+.fe-65fc095e3187af03f28e92ef .fe-block-yui_3_17_2_1_1711010880543_164412{grid-area:1/2/2/10!important}
+@media (min-width:768px){.fe-65fc095e3187af03f28e92ef .fe-block-yui_3_17_2_1_1711010880543_164412{grid-area:1/7/2/21!important}}
